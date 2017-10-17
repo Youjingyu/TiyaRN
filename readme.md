@@ -1,4 +1,4 @@
-###TiyaRN
+### TiyaRN ###
 一个基于React Native的app。
 
 环境搭建过程遇到的问题：
