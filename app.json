@@ -1,4 +1,5 @@
 {
-  "name": "TiyaRN",
-  "displayName": "TiyaRN"
+  "expo": {
+    "sdkVersion": "21.0.0"
+  }
 }
