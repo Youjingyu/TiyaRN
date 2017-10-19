@@ -12,7 +12,7 @@ export default class Index extends Component {
         if(this.state.isFontReady){
             return (
                 <Container>
-                    <MyHeader title="HOME"/>
+                    <MyHeader title="Home"/>
                     <Content>
                         <Text>
                             This is Content Section
