@@ -1,3 +1,31 @@
-import Index from './src/index';
+import React, { Component } from 'react';
+import { Container} from 'native-base';
+import MainRouter from './src/index';
 
-export default Index;
+export default class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+            isFontReady: false
+        };
+    }
+    render() {
+        if(this.state.isFontReady){
+            return <MainRouter />
+        } else {
+            return (
+                <Container />
+            );
+        }
+    }
+    async componentWillMount() {
+        await Expo.Font.loadAsync({
+            'Roboto': require('native-base/Fonts/Roboto.ttf'),
+            'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
+        });
+
+        this.setState({
+            isFontReady: true
+        })
+    }
+}
