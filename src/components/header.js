@@ -23,12 +23,7 @@ export default class MyHeader extends Component {
 
 const style = StyleSheet.create({
     header: {
-        width: '100%',
-        ...Platform.select({
-            android: {
-                marginTop: StatusBar.currentHeigh,
-            }
-        })
+        width: '100%'
     },
     left: {
       flex: 1

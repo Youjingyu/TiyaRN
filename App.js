@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container} from 'native-base';
-import MainRouter from './src/index';
+import AppMain from './src/index';
 
 export default class App extends Component {
     constructor() {
@@ -11,7 +11,7 @@ export default class App extends Component {
     }
     render() {
         if(this.state.isFontReady){
-            return <MainRouter />
+            return <AppMain />
         } else {
             return (
                 <Container />

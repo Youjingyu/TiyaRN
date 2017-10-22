@@ -1,4 +1,5 @@
 import color from "color";
+import customColor from "../../style/color";
 
 import { Platform, Dimensions, PixelRatio } from "react-native";
 
@@ -41,7 +42,7 @@ export default {
   checkboxTickColor: "#fff",
 
   // Segment
-  segmentBackgroundColor: "#3F51B5",
+  segmentBackgroundColor: customColor.mainColor,
   segmentActiveBackgroundColor: "#fff",
   segmentTextColor: "#fff",
   segmentActiveTextColor: "#3F51B5",
@@ -109,8 +110,8 @@ export default {
   cardDefaultBg: "#fff",
 
   // Color
-  brandPrimary: "#FB71A2",
-  brandInfo: "#3F57D3",
+  brandPrimary: customColor.mainColor,
+  brandInfo: customColor.mainColor,
   brandSuccess: "#5cb85c",
   brandDanger: "#d9534f",
   brandWarning: "#f0ad4e",
@@ -134,7 +135,7 @@ export default {
 
   // Footer
   footerHeight: isIphoneX ? 89 : 55,
-  footerDefaultBg: "#FB71A2",
+  footerDefaultBg: customColor.mainColor,
   footerPaddingBottom: isIphoneX ? 34 : 0,
 
   // FooterTab
@@ -146,7 +147,7 @@ export default {
   tabActiveBgColor: undefined,
 
   // Tab
-  tabDefaultBg: "#FB71A2",
+  tabDefaultBg: customColor.mainColor,
   topTabBarTextColor: "#b3c7f9",
   topTabBarActiveTextColor: "#fff",
   topTabActiveBgColor: undefined,
@@ -155,7 +156,7 @@ export default {
 
   // Header
   toolbarBtnColor: "#fff",
-  toolbarDefaultBg: "#FB71A2",
+  toolbarDefaultBg: customColor.mainColor,
   toolbarHeight: platform === "ios" ? (isIphoneX ? 88 : 64) : 56,
   toolbarIconSize: platform === "ios" ? 20 : 22,
   toolbarSearchIconSize: platform === "ios" ? 20 : 23,
@@ -163,11 +164,10 @@ export default {
   searchBarHeight: platform === "ios" ? 30 : 40,
   toolbarInverseBg: "#222",
   toolbarTextColor: "#fff",
-  toolbarDefaultBorder: "#3F51B5",
+  toolbarDefaultBorder: customColor.mainColor,
   iosStatusbar: "light-content",
   get statusBarColor() {
     return color(this.toolbarDefaultBg)
-      .darken(0.2)
       .hex();
   },
 
