@@ -3,7 +3,10 @@ import { TabNavigator } from 'react-navigation';
 import Index from './pages/index';
 import Media from './pages/media';
 import Note from './pages/note';
-import MyFooter from './components/footer'
+import MyFooter from './components/footer';
+import {resetConsole} from './utils/reset';
+
+resetConsole();
 
 const MainRouter = TabNavigator(
     {

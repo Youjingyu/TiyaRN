@@ -1,5 +1,5 @@
 /* global global, __DEV__ */
-export default function resetEvn() {
+export function resetConsole() {
     if (!__DEV__) {
         global.console = {
             info: () => {},
@@ -9,4 +9,4 @@ export default function resetEvn() {
             error: () => {},
         };
     }
-};
+}
