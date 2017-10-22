@@ -14,3 +14,4 @@
 - 可以用flex实现Native Base的header组件的title居中
 - react-navigation的TabNavigator导航不支持自定义动画，只能开启或者关闭动画。
 - TabNavigator导航存在延时问题，暂未在社区找到解决方案（原因可能是开启了远程调试js、react-native-sentry的错误追踪导致、react重复渲染界面、在调式模式下的延时导致，真机下可能没问题，待验证）
+- 在手指滑动切换TabNavigator导航时，tab的状态更新有延时（期望于build后会有所改善，待解决）
