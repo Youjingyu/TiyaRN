@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet} from 'react-native';
 import { Footer, FooterTab, Button, Text, Icon } from 'native-base';
+import color from '../style/color';
+
 export default class MyFooter extends Component {
     constructor() {
         super();
@@ -18,13 +20,14 @@ export default class MyFooter extends Component {
             <Footer style={style.footer}>
                 <FooterTab>
                     {this.pageList.map((ele, index) =>{
+                        const active = this.props.nav.navigationState.index === index;
                         return (
                             <Button vertical
-                                    active={this.props.nav.navigationState.index === index}
+                                    active={active}
                                     key={index} style={style.button}
                                     onPress={this.footerPress.bind(this, index)}>
-                                <Icon name={ele.icon} />
-                                <Text>{ele.name}</Text>
+                                <Icon name={ele.icon} style={active ? style.textActive : style.text}/>
+                                <Text style={active ? style.textActive : style.text}>{ele.name}</Text>
                             </Button>
                         )
                     })}
@@ -39,5 +42,11 @@ export default class MyFooter extends Component {
 const style = StyleSheet.create({
     button: {
         height: 70
+    },
+    text: {
+        color: '#fff'
+    },
+    textActive: {
+        color: color.darkRed
     }
 });
