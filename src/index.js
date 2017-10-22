@@ -1,4 +1,5 @@
-import React, { Component } from "react"; 
+/* global global */
+import React, { Component } from "react";
 import { TabNavigator } from 'react-navigation'
 import {StyleProvider} from 'native-base';
 import getTheme from './native-base-theme/components';
@@ -8,6 +9,16 @@ import Media from './pages/media';
 import Note from './pages/note';
 import MyFooter from './components/footer';
 import {resetConsole} from './utils/reset';
+import Storage from 'react-native-storage';
+import { AsyncStorage } from 'react-native';
+
+// define a unique storage in global
+global.storage = new Storage({
+    // size: 1000,
+    storageBackend: AsyncStorage,
+    defaultExpires: null,
+    enableCache: true,
+});
 
 resetConsole();
 
