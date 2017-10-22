@@ -16,6 +16,7 @@ const MainRouter = TabNavigator(
     },
     {
         tabBarPosition: "bottom",
+        animationEnabled: false,
         tabBarComponent: props => {
             return <MyFooter nav={props} />
         }
