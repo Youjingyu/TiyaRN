@@ -16,3 +16,4 @@
 - TabNavigator导航存在延时问题，暂未在社区找到解决方案（原因可能是开启了远程调试js、react-native-sentry的错误追踪导致、react重复渲染界面、在调式模式下的延时导致，真机下可能没问题，待验证）
 - 在手指滑动切换TabNavigator导航时，tab的状态更新有延时（期望于build后会有所改善，待解决）
 - 可以自定义Native Base的样式。但其配置中没有基准色调的变量，需要单独为每个组件配置样式。
+- Native Base的Content组件的子元素设置了```position: absolute```后，该子元素会不可见，设置Content组件的height以及子元素的zIndex均无效，用Container作为父元素则生效。待探索。
